@@ -1,9 +1,9 @@
-# Fabric Example Mod
+# 修改最大渲染距离设置
 
-## Setup
+算是我的首次mixin尝试吧
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+这个模组让你可以将渲染距离设置到128
 
-## License
+支持sodium的视频设置界面以及原版视频设置界面
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+游戏版本1.20.1，你应该使用fabric，因为forge没法1G内存编译，而且我还不知道怎么在forge上用mixin
