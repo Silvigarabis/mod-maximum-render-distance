@@ -1,4 +1,4 @@
-package me.silvigarabis.mod_maxium_distance.mixin.client.compatibility;
+package me.silvigarabis.mod_maximum_distance.mixin.client.compatibility;
 
 import me.jellysquid.mods.sodium.client.gui.SodiumGameOptionPages;
 import me.jellysquid.mods.sodium.client.gui.options.control.SliderControl;

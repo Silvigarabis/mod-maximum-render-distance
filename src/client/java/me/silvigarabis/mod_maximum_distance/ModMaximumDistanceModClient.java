@@ -3,7 +3,7 @@ package me.silvigarabis.mod_maximum_distance;
 import net.fabricmc.api.ClientModInitializer;
 
 public class ModMaximumDistanceModClient implements ClientModInitializer {
-   public int getMaxViewDistance(){
+   public static int getMaxViewDistance(){
       return 128;
    }
 
