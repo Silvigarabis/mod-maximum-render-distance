@@ -30,7 +30,7 @@ public abstract class SodiumGameOptionsMixin {
    private static final Logger LOGGER = LoggerFactory.getLogger("SodiumGameOptionsMixin");
 
    @ModifyArgs(
-      method = "general",
+      method = "lambda$general$0",
       require = 0,
       at = @At(
          value = "INVOKE",
@@ -39,7 +39,7 @@ public abstract class SodiumGameOptionsMixin {
       ),
       remap = false
    )
-   private static void modifyMaximumViewDistance(Args args, CallbackInfo info){
+   private static void modifyMaximumViewDistance(Args args){
       LOGGER.info("found old sodium, inject it to modify view distance in sodium's game options");
 
       int maxViewDistance = ModMaximumDistanceModClient.getMaxViewDistance();
