@@ -22,14 +22,9 @@ public abstract class ModMaximumDistanceMixin {
 
    @Unique
    private static SimpleOption<Integer> createModifiedViewDistanceOption(MinecraftClient client){
-      int defaultValue;
-      if (client.is64Bit()){
-         defaultValue = 12;
-      } else {
-         defaultValue = 8;
-      }
-      
-      return new SimpleOption<Integer>(
+      int defaultValue = 12;
+
+       return new SimpleOption<Integer>(
          "options.renderDistance",
          SimpleOption.emptyTooltip(),
          (optionText, value) -> GameOptions.getGenericValueText(
