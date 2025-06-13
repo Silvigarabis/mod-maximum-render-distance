@@ -7,25 +7,20 @@ import net.minecraft.text.Text;
 
 import org.objectweb.asm.Opcodes;
 
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 
 import me.silvigarabis.mod_maximum_distance.ModMaximumDistanceModClient;
+import static me.silvigarabis.mod_maximum_distance.ModMaximumDistanceModClient.LOGGER;
 
 @Mixin(GameOptions.class)
 public abstract class ModMaximumDistanceMixin {
-   private static final Logger LOGGER = LoggerFactory.getLogger("ModMaxiumDistanceMixin");
 
+   @Unique
    private static SimpleOption<Integer> createModifiedViewDistanceOption(MinecraftClient client){
       int defaultValue;
       if (client.is64Bit()){
